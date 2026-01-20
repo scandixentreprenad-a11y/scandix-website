@@ -30,7 +30,7 @@ body {
 
 .contact-info {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 30px;
 }
 
@@ -61,7 +61,7 @@ header {
 }
 
 .logo img {
-    height: 60px;
+    height: 120px;
     width: auto;
 }
 
@@ -216,6 +216,11 @@ header {
     font-size: 22px;
 }
 
+.contact-form h3 i {
+    margin-right: 10px;
+    color: #ffffff;
+}
+
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -272,6 +277,25 @@ header {
 .services-section {
     background-color: #f5f5f5;
     padding: 80px 0;
+}
+
+.services-intro {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    text-align: left;
+}
+
+.services-intro h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 700;
+}
+
+.services-intro p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
 .services-grid {
@@ -867,34 +891,16 @@ header {
     justify-content: center;
 }
 
-/* Partners */
-.partners {
-    background-color: #ffffff;
-    padding: 60px 0;
+/* Partners - Fullbredd */
+.partners-fullwidth {
+    padding: 0;
+    margin: 0;
 }
 
-.partners-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 30px;
-    align-items: center;
-}
-
-.partner-item {
-    text-align: center;
-}
-
-.partner-item img {
-    max-width: 120px;
+.partners-fullwidth img {
+    width: 100%;
     height: auto;
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: all 0.3s;
-}
-
-.partner-item img:hover {
-    filter: grayscale(0%);
-    opacity: 1;
+    display: block;
 }
 
 /* Footer */
@@ -923,7 +929,7 @@ footer {
 
 .footer-info i {
     margin-right: 10px;
-    color: #c62828;
+    color: #888;
 }
 
 .footer-menu ul {
@@ -968,10 +974,6 @@ footer {
 
     .testimonials-grid {
         grid-template-columns: 1fr;
-    }
-
-    .partners-grid {
-        grid-template-columns: repeat(3, 1fr);
     }
 
     .footer-content {
@@ -1045,15 +1047,15 @@ footer {
     .contact-info {
         flex-direction: column;
         gap: 10px;
-        align-items: flex-end;
-    }
-
-    .partners-grid {
-        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
     }
 
     .values-grid {
         grid-template-columns: 1fr;
+    }
+
+    .logo img {
+        height: 80px;
     }
 }
 
@@ -1089,5 +1091,9 @@ footer {
     .btn-hero {
         padding: 14px 28px;
         font-size: 14px;
+    }
+
+    .logo img {
+        height: 60px;
     }
 }
