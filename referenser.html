@@ -6,6 +6,120 @@
     <title>Referenser - Scandix Entreprenad AB</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .customer-reviews {
+            padding: 60px 20px;
+            background: #f9f9f9;
+        }
+        
+        .customer-reviews h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #333;
+        }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .review-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .review-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .review-header {
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+            color: #000;
+        }
+        
+        .stars-plus {
+            color: #d4af37;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+        
+        .review-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #000;
+            font-size: 1.1em;
+        }
+        
+        .review-text {
+            font-size: 0.9em;
+            line-height: 1.5;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .review-author {
+            font-size: 0.85em;
+            color: #888;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+        
+        .review-author strong {
+            display: block;
+            color: #000;
+            margin-bottom: 3px;
+        }
+        
+        .references-section {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .references-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #333;
+        }
+        
+        .references-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .reference-item {
+            text-align: center;
+        }
+        
+        .reference-item h3 {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: #000;
+        }
+        
+        .reference-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+    </style>
 </head>
 <body>
     <!-- Toppbanner -->
@@ -50,107 +164,109 @@
         </div>
     </header>
 
-    <!-- Testimonials Page -->
-    <section class="testimonials-page">
-        <div class="container">
-            <h1>Vad våra kunder säger om oss</h1>
-            <p class="testimonials-intro">Vi är stolta över att ha hjälpt hundratals nöjda kunder att förverkliga sina byggprojekt. Här är vad några av dem har att säga om sitt samarbete med Scandix Entreprenad AB.</p>
-
-            <div class="testimonials-list">
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"Vi anlitade Scandix Entreprenad AB för att renovera vårt badrum och vi kunde inte vara mer nöjda med resultatet! Från första kontakten var de professionella, lyhörda och hjälpsamma. De tog sig tid att förstå våra önskemål och kom med kreativa lösningar som förbättrade våra ursprungliga planer. Arbetet utfördes snabbt och effektivt, och kvaliteten på hantverket är exceptionell. Vi kan varmt rekommendera Scandix Entreprenad AB till alla som söker pålitliga och skickliga byggentreprenörer."</p>
-                    <div class="testimonial-author">
-                        <strong>Anna & Erik</strong>
-                        <span>Badrumsrenovering, Stockholm</span>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"Som fastighetsägare har jag arbetat med många entreprenörer genom åren, men få har imponerat på mig lika mycket som Scandix Entreprenad AB. De genomförde en omfattande takrenovering på en av våra kommersiella fastigheter och gjorde ett fantastiskt jobb. Deras uppmärksamhet på detaljer, engagemang för kvalitet och förmåga att hålla tidsramar var enastående. Kommunikationen var utmärkt under hela projektet. Jag ser fram emot att arbeta med dem igen i framtiden."</p>
-                    <div class="testimonial-author">
-                        <strong>Michael Andersson</strong>
-                        <span>Fastighetsägare, Takläggning</span>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"Vi hade problem med fukt i källaren och kontaktade Scandix Entreprenad AB för hjälp med dränering. De gjorde en grundlig analys av problemet och installerade ett effektivt dräneringssystem. Teamet var kunnigt, punktligt och städade alltid upp efter sig. Det är nu flera månader sedan arbetet slutfördes och vi har inte haft några problem med fukt. Tack för ett professionellt arbete!"</p>
-                    <div class="testimonial-author">
-                        <strong>Lisa Bergström</strong>
-                        <span>Dränering, Solna</span>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"Scandix Entreprenad AB renoverade fasaden på vår villa och resultatet blev över förväntan. De hjälpte oss att välja rätt färg och finish, och utförandet var felfritt. Våra grannar har kommenterat hur snyggt det blev och vi har redan rekommenderat företaget till flera vänner. Priset var också väldigt rimligt för den kvalitet vi fick."</p>
-                    <div class="testimonial-author">
-                        <strong>Karin & Peter Johansson</strong>
-                        <span>Fasadmålning, Nacka</span>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"Vi hade sprickor i grunden på vårt hus och var oroliga för säkerheten. Scandix Entreprenad AB kom ut och gjorde en noggrann inspektion, förklarade problemet tydligt och gav oss flera lösningsförslag. Grundförstärkningen utfördes professionellt och nu känner vi oss trygga igen. Mycket bra service från start till slut!"</p>
-                    <div class="testimonial-author">
-                        <strong>Thomas Nyström</strong>
-                        <span>Grundförstärkning, Lidingö</span>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"Jag kan varmt rekommendera Scandix Entreprenad AB! De renoverade både köket och badrummet i min lägenhet. Projektet höll budget och tidsplan, vilket inte är självklart i byggbranschen. Teamet var alltid artigt, respektfullt och lämnade alltid arbetsplatsen städad. Resultatet är helt fantastiskt och jag är så nöjd med mitt nya kök och badrum!"</p>
-                    <div class="testimonial-author">
-                        <strong>Emma Lindberg</strong>
-                        <span>Kök- & Badrumsrenovering, Stockholm</span>
-                    </div>
+    <!-- Customer Reviews Section -->
+    <section class="customer-reviews">
+        <h1>VAD VÅRA KUNDER SÄGER OM OSS</h1>
+        <div class="reviews-grid">
+            <div class="review-item">
+                <div class="review-header">Kundomdöme:</div>
+                <div class="stars-plus">+ + + + +</div>
+                <div class="review-title">Hjälp med byggråd</div>
+                <div class="review-text">NORDIX ENTREPRENAD har på ett mycket professionellt och välvilligt sätt hjälpt mig med mycket viktiga byggråd och möjliga korringerings-/ändringsarbeten rörande en felaktig utförd takläggning av shingeltak som jag beställt och fått utfört av annat byggföretag - tyvärr! Tack vare Andreas hjälp har jag nu börjat få rätsida på affären med den takläggare som utförde arbetet på felaktigt sätt och även fått samma och ytterligare samstämmig info från Kerabit, Icopa, Mataki med korrekt monteringsanvisning. Vill avsluta med ett Stort Tack till Peter på nordix entreprenad för hans tidsinsats utan debitering.</div>
+                <div class="review-author">
+                    <strong>Adam Kohn</strong>
+                    2022-03-22 Stockholm
                 </div>
             </div>
 
-            <div class="testimonials-cta">
-                <h3>Vill du också bli en av våra nöjda kunder?</h3>
-                <a href="kontakt.html" class="btn btn-primary">KONTAKTA OSS IDAG</a>
+            <div class="review-item">
+                <div class="review-header">Kundomdöme</div>
+                <div class="stars-plus">+ + + + +</div>
+                <div class="review-title">Takrenovering</div>
+                <div class="review-text">Proffsiga, trevliga och punktliga. nordisk entreprenad la om mitt tak, jag gjorde en oberoende besiktning innan betalning, fanns inga anmärkningar. Skulle jag lägga om ett tak till kommer jag absolut vända mig till nordix bygg entreprenad igen.</div>
+                <div class="review-author">
+                    <strong>Peter L</strong>
+                    21-12-02 Bromma
+                </div>
+            </div>
+
+            <div class="review-item">
+                <div class="review-header">Kundomdöme</div>
+                <div class="stars-plus">+ + + + +</div>
+                <div class="review-title">Taktvätt</div>
+                <div class="review-text">Snabbt och bra utfört arbete.</div>
+                <div class="review-author">
+                    <strong>Laura Mattis</strong>
+                    2022-07-16
+                </div>
+            </div>
+
+            <div class="review-item">
+                <div class="review-header">Kundomdöme</div>
+                <div class="stars-plus">+ + + +</div>
+                <div class="review-title">Byte av takpapp på fritidshus</div>
+                <div class="review-text">Bra och snabbt utfört jobb och till ett rimligt pris, vid byte av takpapp på ett mindre fritidshus.</div>
+                <div class="review-author">
+                    <strong>Sture G</strong>
+                    22-03-12 Värmdö
+                </div>
+            </div>
+
+            <div class="review-item">
+                <div class="review-header">Kundomdöme</div>
+                <div class="stars-plus">+ + + + +</div>
+                <div class="review-title">Fasadmålning</div>
+                <div class="review-text">Mycket nöjd med arbetet, över förväntan. Noggrant utfört. Kan varmt rekommendera Nordix Entreprenad. Bra kundservice, höll vad dem lovade. Högsta betyg!</div>
+                <div class="review-author">
+                    <strong>Robert Bennett</strong>
+                    2022-04-01
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- References Section -->
+    <section class="references-section">
+        <h2>Referenser</h2>
+        <div class="references-grid">
+            <div class="reference-item">
+                <h3>Fasad målning / Altan</h3>
+                <img src="images/references/fasad-malning-altan.jpg" alt="Fasad målning / Altan">
+            </div>
+
+            <div class="reference-item">
+                <h3>Pågånde badrumsrenovering</h3>
+                <img src="images/references/pagaende-badrumsrenovering.jpg" alt="Pågånde badrumsrenovering">
+            </div>
+
+            <div class="reference-item">
+                <h3>Total badrumsrenovering</h3>
+                <img src="images/references/total-badrumsrenovering.jpg" alt="Total badrumsrenovering">
+            </div>
+
+            <div class="reference-item">
+                <h3>Fasad Målning</h3>
+                <img src="images/references/fasad-malning.jpg" alt="Fasad Målning">
+            </div>
+
+            <div class="reference-item">
+                <h3>Referens projekt</h3>
+                <img src="images/references/referens-projekt.jpg" alt="Referens projekt">
+            </div>
+
+            <div class="reference-item">
+                <h3>Nya fönster, nytt tak, ny panel på fasad</h3>
+                <img src="images/references/nya-fonster-tak-panel.jpg" alt="Nya fönster, nytt tak, ny panel på fasad">
+            </div>
+
+            <div class="reference-item">
+                <h3>Nytt omlagd tak samt, takkupa nymålad</h3>
+                <img src="images/references/nytt-tak-takkupa.jpg" alt="Nytt omlagd tak samt, takkupa nymålad">
+            </div>
+
+            <div class="reference-item">
+                <h3>Drönar bild shingel tak</h3>
+                <img src="images/references/dronar-shingel-tak.jpg" alt="Drönar bild shingel tak">
             </div>
         </div>
     </section>
