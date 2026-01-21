@@ -6,6 +6,7 @@
     <title>Referenser - Scandix Entreprenad AB</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         .customer-reviews {
             padding: 60px 20px;
@@ -15,29 +16,37 @@
         .customer-reviews h1 {
             text-align: center;
             font-size: 2.5em;
-            margin-bottom: 50px;
+            margin-bottom: 10px;
             color: #333;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #333;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .customer-reviews-header {
+            text-align: center;
+            margin-bottom: 50px;
         }
         
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+        .reviews-container {
             max-width: 1400px;
             margin: 0 auto;
-        }
-        
-        .review-item {
             background: white;
-            padding: 20px;
+            padding: 30px;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
         }
-        
-        .review-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+        .review-item {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .review-item:last-child {
+            border-bottom: none;
         }
         
         .review-header {
@@ -90,13 +99,24 @@
         .references-section h2 {
             text-align: center;
             font-size: 2.5em;
-            margin-bottom: 50px;
+            margin-bottom: 10px;
             color: #333;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #333;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .references-header {
+            text-align: center;
+            margin-bottom: 50px;
         }
         
         .references-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
             max-width: 1400px;
             margin: 0 auto;
@@ -107,9 +127,10 @@
         }
         
         .reference-item h3 {
-            font-size: 1.2em;
+            font-size: 0.9em;
             margin-bottom: 15px;
             color: #000;
+            font-weight: 300;
         }
         
         .reference-item img {
@@ -166,8 +187,10 @@
 
     <!-- Customer Reviews Section -->
     <section class="customer-reviews">
-        <h1>VAD VÅRA KUNDER SÄGER OM OSS</h1>
-        <div class="reviews-grid">
+        <div class="customer-reviews-header">
+            <h1>VAD VÅRA KUNDER SÄGER OM OSS</h1>
+        </div>
+        <div class="reviews-container">
             <div class="review-item">
                 <div class="review-header">Kundomdöme:</div>
                 <div class="stars-plus">+ + + + +</div>
@@ -227,21 +250,13 @@
 
     <!-- References Section -->
     <section class="references-section">
-        <h2>Referenser</h2>
+        <div class="references-header">
+            <h2>Referenser</h2>
+        </div>
         <div class="references-grid">
             <div class="reference-item">
                 <h3>Fasad målning / Altan</h3>
                 <img src="images/references/fasad-malning-altan.jpg" alt="Fasad målning / Altan">
-            </div>
-
-            <div class="reference-item">
-                <h3>Pågånde badrumsrenovering</h3>
-                <img src="images/references/pagaende-badrumsrenovering.jpg" alt="Pågånde badrumsrenovering">
-            </div>
-
-            <div class="reference-item">
-                <h3>Total badrumsrenovering</h3>
-                <img src="images/references/total-badrumsrenovering.jpg" alt="Total badrumsrenovering">
             </div>
 
             <div class="reference-item">
@@ -250,8 +265,18 @@
             </div>
 
             <div class="reference-item">
+                <h3>Pågånde badrumsrenovering</h3>
+                <img src="images/references/pagaende-badrumsrenovering.jpg" alt="Pågånde badrumsrenovering">
+            </div>
+
+            <div class="reference-item">
                 <h3>Referens projekt</h3>
                 <img src="images/references/referens-projekt.jpg" alt="Referens projekt">
+            </div>
+
+            <div class="reference-item">
+                <h3>Total badrumsrenovering</h3>
+                <img src="images/references/total-badrumsrenovering.jpg" alt="Total badrumsrenovering">
             </div>
 
             <div class="reference-item">
