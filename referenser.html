@@ -32,21 +32,26 @@
         }
         
         .reviews-container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 0 60px;
             background: white;
-            padding: 30px;
+            padding: 30px 60px;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        .review-item {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 20px;
         }
 
-        .review-item:last-child {
-            border-bottom: none;
+        .review-item {
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background: #fafafa;
         }
         
         .review-header {
@@ -93,6 +98,18 @@
             margin-bottom: 3px;
             font-weight: 300;
         }
+
+        .review-column-left {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .review-column-right {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
         
         .references-section {
             padding: 60px 20px;
@@ -121,8 +138,9 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 30px;
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 0 60px;
         }
         
         .reference-item {
@@ -138,7 +156,7 @@
         
         .reference-item img {
             width: 100%;
-            height: 250px;
+            height: 300px;
             object-fit: cover;
             border-radius: 8px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.2);
@@ -194,58 +212,64 @@
             <h1>VAD VÅRA KUNDER SÄGER OM OSS</h1>
         </div>
         <div class="reviews-container">
-            <div class="review-item">
-                <div class="review-header">Kundomdöme:</div>
-                <div class="stars-plus">+ + + + +</div>
-                <div class="review-title">Hjälp med byggråd</div>
-                <div class="review-text">NORDIX ENTREPRENAD har på ett mycket professionellt och välvilligt sätt hjälpt mig med mycket viktiga byggråd och möjliga korringerings-/ändringsarbeten rörande en felaktig utförd takläggning av shingeltak som jag beställt och fått utfört av annat byggföretag - tyvärr! Tack vare Andreas hjälp har jag nu börjat få rätsida på affären med den takläggare som utförde arbetet på felaktigt sätt och även fått samma och ytterligare samstämmig info från Kerabit, Icopa, Mataki med korrekt monteringsanvisning. Vill avsluta med ett Stort Tack till Peter på nordix entreprenad för hans tidsinsats utan debitering.</div>
-                <div class="review-author">
-                    <strong>Adam Kohn</strong>
-                    2022-03-22 Stockholm
-                </div>
-            </div>
+            <div class="reviews-grid">
+                <div class="review-column-left">
+                    <div class="review-item">
+                        <div class="review-header">Kundomdöme:</div>
+                        <div class="stars-plus">+ + + + +</div>
+                        <div class="review-title">Hjälp med byggråd</div>
+                        <div class="review-text">NORDIX ENTREPRENAD har på ett mycket professionellt och välvilligt sätt hjälpt mig med mycket viktiga byggråd och möjliga korringerings-/ändringsarbeten rörande en felaktig utförd takläggning av shingeltak som jag beställt och fått utfört av annat byggföretag - tyvärr! Tack vare Andreas hjälp har jag nu börjat få rätsida på affären med den takläggare som utförde arbetet på felaktigt sätt och även fått samma och ytterligare samstämmig info från Kerabit, Icopa, Mataki med korrekt monteringsanvisning. Vill avsluta med ett Stort Tack till Peter på nordix entreprenad för hans tidsinsats utan debitering.</div>
+                        <div class="review-author">
+                            <strong>Adam Kohn</strong>
+                            2022-03-22 Stockholm
+                        </div>
+                    </div>
 
-            <div class="review-item">
-                <div class="review-header">Kundomdöme</div>
-                <div class="stars-plus">+ + + + +</div>
-                <div class="review-title">Takrenovering</div>
-                <div class="review-text">Proffsiga, trevliga och punktliga. nordisk entreprenad la om mitt tak, jag gjorde en oberoende besiktning innan betalning, fanns inga anmärkningar. Skulle jag lägga om ett tak till kommer jag absolut vända mig till nordix bygg entreprenad igen.</div>
-                <div class="review-author">
-                    <strong>Peter L</strong>
-                    21-12-02 Bromma
+                    <div class="review-item">
+                        <div class="review-header">Kundomdöme</div>
+                        <div class="stars-plus">+ + + +</div>
+                        <div class="review-title">Byte av takpapp på fritidshus</div>
+                        <div class="review-text">Bra och snabbt utfört jobb och till ett rimligt pris, vid byte av takpapp på ett mindre fritidshus.</div>
+                        <div class="review-author">
+                            <strong>Sture G</strong>
+                            22-03-12 Värmdö
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="review-item">
-                <div class="review-header">Kundomdöme</div>
-                <div class="stars-plus">+ + + + +</div>
-                <div class="review-title">Taktvätt</div>
-                <div class="review-text">Snabbt och bra utfört arbete.</div>
-                <div class="review-author">
-                    <strong>Laura Mattis</strong>
-                    2022-07-16
-                </div>
-            </div>
+                <div class="review-column-right">
+                    <div class="review-item">
+                        <div class="review-header">Kundomdöme</div>
+                        <div class="stars-plus">+ + + + +</div>
+                        <div class="review-title">Takrenovering</div>
+                        <div class="review-text">Proffsiga, trevliga och punktliga. nordisk entreprenad la om mitt tak, jag gjorde en oberoende besiktning innan betalning, fanns inga anmärkningar. Skulle jag lägga om ett tak till kommer jag absolut vända mig till nordix bygg entreprenad igen.</div>
+                        <div class="review-author">
+                            <strong>Peter L</strong>
+                            21-12-02 Bromma
+                        </div>
+                    </div>
 
-            <div class="review-item">
-                <div class="review-header">Kundomdöme</div>
-                <div class="stars-plus">+ + + +</div>
-                <div class="review-title">Byte av takpapp på fritidshus</div>
-                <div class="review-text">Bra och snabbt utfört jobb och till ett rimligt pris, vid byte av takpapp på ett mindre fritidshus.</div>
-                <div class="review-author">
-                    <strong>Sture G</strong>
-                    22-03-12 Värmdö
-                </div>
-            </div>
+                    <div class="review-item">
+                        <div class="review-header">Kundomdöme</div>
+                        <div class="stars-plus">+ + + + +</div>
+                        <div class="review-title">Taktvätt</div>
+                        <div class="review-text">Snabbt och bra utfört arbete.</div>
+                        <div class="review-author">
+                            <strong>Laura Mattis</strong>
+                            2022-07-16
+                        </div>
+                    </div>
 
-            <div class="review-item">
-                <div class="review-header">Kundomdöme</div>
-                <div class="stars-plus">+ + + + +</div>
-                <div class="review-title">Fasadmålning</div>
-                <div class="review-text">Mycket nöjd med arbetet, över förväntan. Noggrant utfört. Kan varmt rekommendera Nordix Entreprenad. Bra kundservice, höll vad dem lovade. Högsta betyg!</div>
-                <div class="review-author">
-                    <strong>Robert Bennett</strong>
-                    2022-04-01
+                    <div class="review-item">
+                        <div class="review-header">Kundomdöme</div>
+                        <div class="stars-plus">+ + + + +</div>
+                        <div class="review-title">Fasadmålning</div>
+                        <div class="review-text">Mycket nöjd med arbetet, över förväntan. Noggrant utfört. Kan varmt rekommendera Nordix Entreprenad. Bra kundservice, höll vad dem lovade. Högsta betyg!</div>
+                        <div class="review-author">
+                            <strong>Robert Bennett</strong>
+                            2022-04-01
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
