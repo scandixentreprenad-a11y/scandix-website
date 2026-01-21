@@ -1219,13 +1219,13 @@ footer {
         min-width: 280px;
     }
     
-    /* Mobile menu styling - slajdar från höger med mörkgrå bakgrund */
+    /* Mobile menu styling - slajdar från höger med mörkgrå bakgrund, täcker 2/3 */
     .menu {
         display: none;
         position: fixed;
         top: 0;
-        right: -100%;
-        width: 80%;
+        right: -67%;
+        width: 67%;
         height: 100vh;
         background-color: #3a3a3a;
         flex-direction: column;
@@ -1295,9 +1295,17 @@ footer {
         padding: 40px 0;
     }
     
-    /* CTA Section - mindre padding */
+    /* CTA Section - mindre padding OCH mindre text */
     .cta-section {
         padding: 40px 0 30px 0;
+    }
+    
+    .cta-section h2 {
+        font-size: 24px;
+    }
+    
+    .cta-section p {
+        font-size: 14px;
     }
 
     .info-contact-grid {
