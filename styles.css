@@ -342,7 +342,7 @@ header {
 /* Byte av gjutjärnsbrunn - Trebilds-sektion */
 .well-gallery {
     background-color: #f5f5f5;
-    padding: 80px 0;
+    padding: 40px 0 40px 0;
 }
 
 .well-gallery h2 {
@@ -360,6 +360,15 @@ header {
 
 .well-gallery {
     text-align: center;
+}
+
+.well-gallery .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* Tjänster - Tre-stycken-sektion */
@@ -573,16 +582,26 @@ header {
 }
 
 .cta-section h2 {
-    font-size: 36px;
+    font-size: 28px;
     margin-bottom: 15px;
     font-weight: 200;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #ffffff;
+    display: inline-block;
+    padding-bottom: 10px;
 }
 
 .cta-section p {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 30px;
     color: #e0e0e0;
     font-weight: 200;
+}
+
+.cta-section .btn-primary {
+    padding: 12px 25px;
+    font-size: 13px;
 }
 
 /* Om Oss Page */
@@ -1137,6 +1156,15 @@ footer {
     font-weight: 200;
 }
 
+.footer-info p a {
+    color: #666;
+    text-decoration: none;
+}
+
+.footer-info p a:hover {
+    color: #666;
+}
+
 .footer-info i {
     margin-right: 10px;
     color: #888;
@@ -1301,11 +1329,16 @@ footer {
     }
     
     .cta-section h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
     
     .cta-section p {
         font-size: 14px;
+    }
+    
+    .cta-section .btn-primary {
+        padding: 10px 20px;
+        font-size: 12px;
     }
 
     .info-contact-grid {
@@ -1327,12 +1360,12 @@ footer {
 
     .footer-content {
         grid-template-columns: 1fr;
-        text-align: center;
+        text-align: left;
     }
 
     .footer-menu ul {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 20px;
     }
 
