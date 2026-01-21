@@ -26,11 +26,6 @@ body {
     background-color: #e8e8e8;
     padding: 10px 0;
     font-size: 14px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1001;
 }
 
 .contact-info {
@@ -58,10 +53,7 @@ header {
     background-color: #ffffff;
     padding: 20px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: fixed;
-    top: 44px;
-    left: 0;
-    right: 0;
+    position: relative;
     z-index: 1000;
 }
 
@@ -105,7 +97,6 @@ header {
 .hero {
     width: 100%;
     overflow: hidden;
-    margin-top: 204px;
 }
 
 .hero img {
@@ -119,7 +110,6 @@ header {
     position: relative;
     width: 100%;
     overflow: hidden;
-    margin-top: 204px;
 }
 
 .hero-with-cta img {
@@ -609,40 +599,34 @@ header {
 
 /* Kundomdömen */
 .testimonials {
-    padding: 0;
-    text-align: center;
-}
-
-.testimonials-background {
-    background-image: url('images/testimonials/testimonials-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 80px 0;
     position: relative;
+    color: #ffffff;
+    padding: 80px 0;
+    text-align: center;
+    overflow: hidden;
 }
 
-.testimonials-background::before {
-    content: '';
+.testimonials-bg {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     z-index: 1;
 }
 
-.testimonials-background .container {
+.testimonials-overlay {
     position: relative;
     z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 80px 0;
 }
 
 .testimonials h2 {
     font-size: 32px;
     margin-bottom: 50px;
     letter-spacing: 2px;
-    color: #ffffff;
 }
 
 .testimonials-grid {
@@ -663,14 +647,12 @@ header {
     font-style: italic;
     line-height: 1.8;
     margin-bottom: 20px;
-    color: #ffffff;
 }
 
 .testimonial-author {
     font-weight: 600;
     text-align: right;
     font-size: 14px;
-    color: #ffffff;
 }
 
 .btn-testimonial {
@@ -937,12 +919,14 @@ header {
 
 /* Partners - Fullbredd */
 .partners-fullwidth {
-    padding: 0;
+    padding: 60px 0;
     margin: 0;
 }
 
 .partners-wrapper {
-    padding: 0 150px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 60px;
 }
 
 .partners-wrapper img {
@@ -958,7 +942,9 @@ footer {
 }
 
 .footer-wrapper {
-    padding: 0 150px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 60px;
 }
 
 .footer-content {
@@ -1117,14 +1103,6 @@ footer {
     .logo img {
         height: 80px;
     }
-
-    .hero-with-cta {
-        margin-top: 164px;
-    }
-
-    header {
-        top: 94px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -1175,13 +1153,5 @@ footer {
 
     .footer-logo img {
         height: 60px;
-    }
-
-    .hero-with-cta {
-        margin-top: 154px;
-    }
-
-    header {
-        top: 84px;
     }
 }
