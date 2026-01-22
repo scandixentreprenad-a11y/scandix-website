@@ -1253,7 +1253,7 @@ footer {
     }
     
     .menu {
-        display: none;
+        display: flex;
         position: fixed;
         top: 0;
         right: -67%;
@@ -1269,7 +1269,6 @@ footer {
     }
     
     .menu.active {
-        display: flex;
         right: 0;
     }
     
@@ -1444,5 +1443,28 @@ footer {
     .process-grid.reverse {
         grid-template-columns: 1fr;
         direction: ltr;
+    }
+    
+    /* Mobile: Text före bild för alla steg */
+    .process-grid .process-text {
+        order: 1;
+    }
+    
+    .process-grid .process-image {
+        order: 2;
+    }
+    
+    .process-grid.reverse .process-text {
+        order: 1;
+    }
+    
+    .process-grid.reverse .process-image {
+        order: 2;
+    }
+    
+    .process-grid,
+    .process-grid.reverse {
+        display: flex;
+        flex-direction: column;
     }
 }
