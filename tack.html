@@ -9,39 +9,40 @@
     <style>
         .thank-you-section {
             background-color: #ffffff;
-            padding: 100px 20px;
+            padding: 120px 20px;
             text-align: center;
-            min-height: 60vh;
+            min-height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
         .thank-you-content {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
+            padding: 60px 40px;
         }
 
         .thank-you-icon {
-            font-size: 80px;
+            font-size: 120px;
             color: #4CAF50;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         .thank-you-content h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             color: #333;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             font-family: 'Roboto', sans-serif;
             font-weight: 300;
             letter-spacing: 2px;
         }
 
         .thank-you-content p {
-            font-size: 18px;
+            font-size: 20px;
             color: #666;
             line-height: 1.8;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             font-weight: 100;
         }
 
@@ -50,6 +51,7 @@
             gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -60,7 +62,7 @@
             <div class="contact-info">
                 <span class="contact-item">
                     <i class="far fa-envelope"></i>
-                    Scandixentreprenad@gmail.com
+                    <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="abf8c8cac5cfc2d3cec5dfd9cedbd9cec5cacfebccc6cac2c785c8c4c6">[email&#160;protected]</a>
                 </span>
                 <span class="contact-item">
                     <i class="fas fa-phone"></i>
@@ -150,7 +152,7 @@
                     </div>
                     <div class="footer-info">
                         <p><i class="fas fa-map-marker-alt"></i> Glanshammarsgatan 66, 12471 Bandhagen</p>
-                        <p><i class="far fa-envelope"></i> Scandixentreprenad@gmail.com</p>
+                        <p><i class="far fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="045767656a606d7c616a7076617476616a6560446369656d682a676b69">[email&#160;protected]</a></p>
                         <p><i class="fas fa-phone-alt"></i> 0762900734</p>
                         <p><i class="fas fa-id-card"></i> Org nr: 559558-1447</p>
                     </div>
@@ -169,7 +171,7 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Mobile menu toggle
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
         const mobileMenu = document.getElementById('mobileMenu');
@@ -189,14 +191,4 @@
             
             // Close menu when clicking outside
             document.addEventListener('click', function(event) {
-                const isClickInsideMenu = mobileMenu.contains(event.target);
-                const isClickOnToggle = mobileMenuToggle.contains(event.target);
-                
-                if (!isClickInsideMenu && !isClickOnToggle && mobileMenu.classList.contains('active')) {
-                    mobileMenu.classList.remove('active');
-                }
-            });
-        }
-    </script>
-</body>
-</html>
+                const isClickInsideMenu = m
