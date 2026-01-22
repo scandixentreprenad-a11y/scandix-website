@@ -30,11 +30,24 @@
             <div class="mobile-logo-small">
                 <img src="images/logo/logo-scandix.png" alt="Scandix Logo">
             </div>
-            <div class="mobile-menu-toggle">
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
     </div>
+
+    <!-- Mobile Menu (Outside Header) -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="tjanster.html">Tjänster</a></li>
+            <li><a href="badrumsrenovering.html">Badrumsrenovering</a></li>
+            <li><a href="gjutjarnsbrunnar.html" class="active">Gjutjärnsbrunnar</a></li>
+            <li><a href="omoss.html">Om oss</a></li>
+            <li><a href="referenser.html">Referenser</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
 
     <!-- Header -->
     <header>
@@ -55,9 +68,6 @@
                         <li><a href="referenser.html">Referenser</a></li>
                         <li><a href="kontakt.html">Kontakt</a></li>
                     </ul>
-                    <div class="mobile-menu-toggle">
-                        <i class="fas fa-bars"></i>
-                    </div>
                 </nav>
             </div>
         </div>
@@ -144,11 +154,33 @@
     </footer>
 
     <script>
-        document.querySelectorAll('.mobile-menu-toggle').forEach(toggle => {
-            toggle.addEventListener('click', function() {
-                document.querySelector('.menu').classList.toggle('active');
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        if (mobileMenuToggle && mobileMenu) {
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('active');
             });
-        });
+            
+            // Close menu when clicking on a link
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideMenu = mobileMenu.contains(event.target);
+                const isClickOnToggle = mobileMenuToggle.contains(event.target);
+                
+                if (!isClickInsideMenu && !isClickOnToggle && mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        }
     </script>
 </body>
 </html>
