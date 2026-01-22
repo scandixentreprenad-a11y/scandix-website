@@ -51,7 +51,7 @@
             padding: 20px;
             border: 1px solid #eee;
             border-radius: 5px;
-            background: #fafafa;
+            background: white;
         }
         
         .review-header {
@@ -145,9 +145,6 @@
         
         .reference-item {
             text-align: center;
-            background: #fafafa;
-            padding: 20px;
-            border-radius: 8px;
         }
         
         .reference-item h3 {
@@ -166,15 +163,14 @@
         }
 
         @media (max-width: 968px) {
-            .references-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-                padding: 0 20px;
+            .reviews-grid {
+                grid-template-columns: 1fr;
             }
 
-            .reference-item {
-                background: white;
-                padding: 0;
+            .references-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0 20px;
             }
 
             .reference-item img {
