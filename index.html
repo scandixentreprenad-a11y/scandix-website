@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -6,81 +7,8 @@
    <title>Hem - Scandix Entreprenad AB</title>
    <link rel="stylesheet" href="styles.css">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-   <style>
-       .thank-you-page {
-           display: none;
-           position: fixed;
-           top: 0;
-           left: 0;
-           width: 100%;
-           height: 100%;
-           background-color: #3a3a3a;
-           z-index: 10000;
-           justify-content: center;
-           align-items: center;
-       }
-
-       .thank-you-page.active {
-           display: flex;
-       }
-
-       .thank-you-content {
-           background-color: #ffffff;
-           padding: 60px 40px;
-           border-radius: 8px;
-           text-align: center;
-           max-width: 600px;
-           margin: 0 20px;
-       }
-
-       .thank-you-content i {
-           font-size: 80px;
-           color: #4CAF50;
-           margin-bottom: 30px;
-       }
-
-       .thank-you-content h2 {
-           font-size: 2em;
-           color: #333;
-           margin-bottom: 20px;
-           font-weight: 300;
-       }
-
-       .thank-you-content p {
-           font-size: 1.1em;
-           color: #666;
-           margin-bottom: 30px;
-           line-height: 1.6;
-           font-weight: 300;
-       }
-
-       .thank-you-content .btn {
-           background-color: #3a3a3a;
-           color: #ffffff;
-           padding: 15px 40px;
-           text-decoration: none;
-           display: inline-block;
-           border-radius: 5px;
-           font-weight: 300;
-           transition: background-color 0.3s;
-       }
-
-       .thank-you-content .btn:hover {
-           background-color: #4a4a4a;
-       }
-   </style>
 </head>
 <body>
-   <!-- Thank You Page -->
-   <div class="thank-you-page" id="thankYouPage">
-       <div class="thank-you-content">
-           <i class="fas fa-check-circle"></i>
-           <h2>Tack för ditt meddelande!</h2>
-           <p>Vi har tagit emot din offertförfrågan och återkommer till dig så snart som möjligt. Vanligtvis svarar vi inom 24 timmar under vardagar.</p>
-           <a href="#" class="btn" id="backToHome">Tillbaka till startsidan</a>
-       </div>
-   </div>
-
    <!-- Toppbanner -->
    <div class="top-banner">
        <div class="container">
@@ -173,24 +101,16 @@
                            <a href="referenser.html" class="btn btn-secondary">SE VÅRA PROJEKT</a>
                        </div>
                    </div>
-                   <div class="contact-form">
-                     <h3><i class="fas fa-hard-hat"></i><br>Kontakta oss för en offert</h3>
-                     <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-                         <!-- Web3Forms access key -->
-                         <input type="hidden" name="access_key" value="eec20556-19d8-4e0b-9d4c-8404fb962755">
+                   <form action="https://api.web3forms.com/submit" method="POST">
+                     <input type="hidden" name="access_key" value="eec20556-19d8-4e0b-9d4c-8404fb962755">
+                     <input type="hidden" name="subject" value="Ny offertförfrågan – Scandix Entreprenad">
+                     <input type="hidden" name="redirect" value="https://scandixentreprenad.se/tack.html">
 
-                         <!-- Optional: subject for email -->
-                         <input type="hidden" name="subject" value="Ny offertförfrågan – Scandix Entreprenad">
-
-                         <!-- Visible fields -->
-                         <input type="text" name="name" placeholder="Namn" required>
-                         <input type="email" name="email" placeholder="E-post" required>
-                         <textarea name="message" placeholder="Meddelande" rows="5" required></textarea>
-
-                         <!-- Submit button -->
-                         <button type="submit" class="btn btn-submit">SKICKA</button>
-                     </form>
-                   </div>
+                     <input type="text" name="name" placeholder="Namn" required>
+                     <input type="email" name="email" placeholder="E-post" required>
+                     <textarea name="message" placeholder="Meddelande" rows="5" required></textarea>
+                     <button type="submit" class="btn btn-submit">SKICKA</button>
+                   </form>
                </div>
            </div>
        </div>
@@ -358,36 +278,7 @@
                mobileMenu.classList.remove('active');
            }
        });
-
-       // Contact form submission
-       const contactForm = document.getElementById('contactForm');
-       const thankYouPage = document.getElementById('thankYouPage');
-       const backToHome = document.getElementById('backToHome');
-
-       contactForm.addEventListener('submit', async function(e) {
-           e.preventDefault();
-           
-           const formData = new FormData(contactForm);
-           
-           try {
-               const response = await fetch('https://api.web3forms.com/submit', {
-                   method: 'POST',
-                   body: formData
-               });
-
-               if (response.ok) {
-                   thankYouPage.classList.add('active');
-                   contactForm.reset();
-               }
-           } catch (error) {
-               console.error('Error:', error);
-           }
-       });
-
-       backToHome.addEventListener('click', function(e) {
-           e.preventDefault();
-           thankYouPage.classList.remove('active');
-       });
    </script>
 </body>
 </html>
+
