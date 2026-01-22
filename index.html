@@ -101,13 +101,22 @@
                        </div>
                    </div>
                    <div class="contact-form">
-                       <h3><i class="fas fa-hard-hat"></i><br>Kontakta oss för en offert</h3>
-                       <form>
-                           <input type="text" placeholder="Namn" required>
-                           <input type="email" placeholder="E-post" required>
-                           <textarea placeholder="Meddelande" rows="5" required></textarea>
-                           <button type="submit" class="btn btn-submit">SKICKA</button>
-                       </form>
+                     <h3><i class="fas fa-hard-hat"></i><br>Kontakta oss för en offert</h3>
+                     <form action="https://api.web3forms.com/submit" method="POST">
+                         <!-- Web3Forms access key -->
+                         <input type="hidden" name="access_key" value="eec20556-19d8-4e0b-9d4c-8404fb962755">
+
+                         <!-- Optional: subject for email -->
+                         <input type="hidden" name="subject" value="Ny offertförfrågan – Scandix Entreprenad">
+
+                         <!-- Visible fields -->
+                         <input type="text" name="name" placeholder="Namn" required>
+                         <input type="email" name="email" placeholder="E-post" required>
+                         <textarea name="message" placeholder="Meddelande" rows="5" required></textarea>
+
+                         <!-- Submit button -->
+                         <button type="submit" class="btn btn-submit">SKICKA</button>
+                     </form>
                    </div>
                </div>
            </div>
