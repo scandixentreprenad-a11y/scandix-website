@@ -1226,6 +1226,11 @@ footer {
         display: none;
     }
     
+    /* Menu måste finnas utanför header på mobil */
+    header .menu {
+        display: flex;
+    }
+    
     .mobile-logo-banner {
         display: block;
         padding: 15px 0;
