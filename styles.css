@@ -479,6 +479,15 @@ header {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Kvadratiska bilder för gjutjärnsbrunnar på tjänster-sidan OCH gjutjärnsbrunnar-sidan */
+.service-detail:last-child .service-images img,
+.services-content .service-detail:first-child .service-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
 /* Badrumsrenovering Page */
 .bathroom-intro {
     background-color: #ffffff;
@@ -572,38 +581,6 @@ header {
     line-height: 1.8;
     font-size: 16px;
     font-weight: 100;
-}
-
-/* Process images - för mobile gallery på badrum */
-.process-images {
-    display: none;
-    margin-top: 20px;
-}
-
-.process-images-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-.process-images-grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.process-images-single {
-    display: block;
-    margin-bottom: 15px;
-}
-
-.process-images-single img {
-    width: calc(50% - 7.5px);
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* CTA Section */
@@ -1233,7 +1210,6 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 968px) {
-    /* Visa mobile top banner, dölj desktop top banner */
     .top-banner {
         display: none;
     }
@@ -1242,17 +1218,14 @@ footer {
         display: block;
     }
     
-    /* Visa hamburger-menyn */
     .mobile-menu-toggle {
         display: block;
     }
     
-    /* Dölj desktop header */
     header {
         display: none;
     }
     
-    /* Visa mobile logo banner - MINDRE */
     .mobile-logo-banner {
         display: block;
         padding: 15px 0;
@@ -1262,13 +1235,11 @@ footer {
         max-height: 100px;
     }
     
-    /* Hero-bild lite mindre på mobil */
     .hero-with-cta img {
         min-height: 400px;
         object-fit: cover;
     }
     
-    /* Hero-knapp längre ner, BREDARE och STÖRRE TEXT */
     .hero-overlay {
         top: 75%;
     }
@@ -1281,7 +1252,6 @@ footer {
         min-width: 280px;
     }
     
-    /* Mobile menu styling - slajdar från höger med mörkgrå bakgrund, täcker 2/3 */
     .menu {
         display: none;
         position: fixed;
@@ -1309,17 +1279,14 @@ footer {
         font-weight: 100;
     }
     
-    /* Info/Kontakt-sektion - mindre padding ovanför */
     .info-contact {
         padding: 40px 0 30px 0;
     }
     
-    /* Kontaktformulär mobil - mindre padding nedanför */
     .contact-form {
         padding: 40px 40px 30px 40px;
     }
     
-    /* Kontaktformulär - större och fetare text, större ikon */
     .contact-form h3 {
         font-size: 18px;
         font-weight: 400;
@@ -1331,7 +1298,6 @@ footer {
         margin-bottom: 15px;
     }
     
-    /* Testimonials - mindre padding och mindre titel */
     .testimonials {
         padding: 30px 0;
     }
@@ -1348,7 +1314,6 @@ footer {
         margin-top: 10px;
     }
     
-    /* Partners - större bild på mobil */
     .partners-wrapper {
         padding: 0;
         max-width: 100%;
@@ -1358,7 +1323,6 @@ footer {
         padding: 40px 0;
     }
     
-    /* CTA Section - mindre padding OCH mindre text */
     .cta-section {
         padding: 40px 0 30px 0;
     }
@@ -1417,7 +1381,24 @@ footer {
     }
 
     .service-images {
-        grid-template-columns: 1fr;
+        display: block;
+    }
+    
+    .service-images img:nth-child(1),
+    .service-images img:nth-child(2) {
+        width: calc(50% - 7.5px);
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    .service-images img:nth-child(2) {
+        margin-left: 15px;
+    }
+    
+    .service-images img:nth-child(3) {
+        width: calc(50% - 7.5px);
+        display: block;
+        margin-top: 15px;
     }
 
     .about-grid {
@@ -1445,7 +1426,6 @@ footer {
         padding: 0 20px;
     }
 
-    /* Mobile - Titlar mindre */
     .info-text h2 {
         font-size: 22px;
     }
@@ -1459,15 +1439,9 @@ footer {
         font-size: 1.8em;
     }
 
-    /* Process grid på mobil - text först, sedan bild, MED bildgalleri */
     .process-grid,
     .process-grid.reverse {
         grid-template-columns: 1fr;
         direction: ltr;
-    }
-    
-    /* Visa bildgalleriet på mobil under varje textstycke */
-    .process-images {
-        display: block;
     }
 }
