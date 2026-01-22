@@ -234,9 +234,9 @@
                        <img src="images/logo/logo-scandix.png" alt="Scandix Rörmokare VVS Stockholm">
                    </div>
                    <div class="footer-info">
-                       <p><i class="far fa-map-marker-alt"></i> Glanshammarsgatan 66, 12471 Bandhagen, Stockholm</p>
+                       <p><i class="fas fa-map-marker-alt"></i> Glanshammarsgatan 66, 12471 Bandhagen, Stockholm</p>
                        <p><i class="far fa-envelope"></i> Scandixentreprenad@gmail.com</p>
-                       <p><i class="far fa-phone-alt"></i> <a href="tel:0762900734">0762900734</a></p>
+                       <p><i class="fas fa-phone-alt"></i> <a href="tel:0762900734">0762900734</a></p>
                        <p><i class="far fa-id-card"></i> Org nr: <a href="#">559558-1447</a></p>
                    </div>
                    <div class="footer-menu">
@@ -254,6 +254,7 @@
        </div>
    </footer>
  
+   <script>
        // Mobile menu toggle
        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
        const mobileMenu = document.getElementById('mobileMenu');
@@ -272,4 +273,21 @@
        
        // Close menu when clicking outside
        document.addEventListener('click', function(event) {
-           const
+           const isClickInsideMenu = mobileMenu.contains(event.target);
+           const isClickOnToggle = mobileMenuToggle.contains(event.target);
+           
+           if (!isClickInsideMenu && !isClickOnToggle && mobileMenu.classList.contains('active')) {
+               mobileMenu.classList.remove('active');
+           }
+       });
+       
+       // Clear form when page loads (after returning from thank you page)
+       window.addEventListener('load', function() {
+           const form = document.querySelector('.contact-form form');
+           if (form) {
+               form.reset();
+           }
+       });
+   </script>
+</body>
+</html>
