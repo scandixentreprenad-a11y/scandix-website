@@ -216,7 +216,7 @@ header {
     letter-spacing: 1px;
     display: inline-block;
     transition: all 0.3s;
-    border-radius: 3px;
+    border-radius: 8px;
 }
 
 .btn-hero:hover {
