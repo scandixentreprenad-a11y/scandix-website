@@ -1495,6 +1495,10 @@ footer {
         cursor: pointer;
         z-index: 10000;
     }
+    
+    .hero-overlay .btn-primary {
+        border-radius: 30px;
+    }
 
     
 }
