@@ -317,6 +317,11 @@
   mobileMenuToggle.addEventListener('click', function () {
     mobileMenu.classList.toggle('active');
   });
+  const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+  mobileMenuClose.addEventListener('click', function () {
+      mobileMenu.classList.remove('active');
+  });
 
   const menuLinks = mobileMenu.querySelectorAll('a');
   menuLinks.forEach(link => {
