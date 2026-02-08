@@ -1443,6 +1443,10 @@ footer {
         font-size: 22px;
     }
 
+    .info-text h1 {
+        margin-bottom: 20px;
+    }
+    
     .bathroom-gallery h2,
     .well-gallery h2,
     .services-intro h2,
