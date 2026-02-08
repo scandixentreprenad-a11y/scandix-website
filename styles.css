@@ -1480,4 +1480,21 @@ footer {
         display: flex;
         flex-direction: column;
     }
+    /* Slide-in mobilmeny: egen hamburgermeny */
+    .mobile-menu-header {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end; /* placera knappen till höger */
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .mobile-menu-toggle-inner {
+        font-size: 24px;
+        color: #ffffff;  /* vit färg på hamburgermeny */
+        cursor: pointer;
+        z-index: 10000;
+    }
+
+    
 }
